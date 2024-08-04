@@ -1,0 +1,19 @@
+version: "3.9"
+
+docknet-extension-workspace:
+  image: docknet-extension-workspace
+  restart: always
+  ports:
+    - "127.0.0.1:30014:8080"
+  environment:
+    - DOCKNET_API_ENDPOINT=http://docknet:8080/api
+    - DOCKNET_DEPLOYMENT_NAME=docknet-extension-workspace
+  labels:
+    ctxy.namespace: "ctxy"
+    ctxy.deploymentType: "extension"
+    ctxy.deploymentName: "docknet-extension-workspace"
+    ctxy.projectName: "ctxy-global"
+    ctxy.ui_extension_endpoint: "8080/projects/{env.projectId}/workspace"
+    ctxy.api_extension_endpoint: "8080/projects/{env.projectId}/workspace"
+  depends_on:
+    - docknet

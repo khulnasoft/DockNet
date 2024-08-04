@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+this-package = {editable = true, extras = ["server"], path = "."}
+
+[dev-packages]
+this-package = {editable = true, extras = ["server", "dev"], path = "."}
+
+[pipenv]
+allow_prereleases = true
+
+[scripts]
+install-kernel = "python -m ipykernel install --user --name=docknet-pipenv"
