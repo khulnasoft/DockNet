@@ -94,7 +94,7 @@ This is called once the request is finished and will close the `request_state` a
 ### <kbd>classmethod</kbd> `from_app`
 
 ```python
-from_app(app: FastAPI) → ComponentManager
+from_app(app: ReadyAPI) → ComponentManager
 ```
 
 

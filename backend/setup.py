@@ -53,7 +53,7 @@ setup(
     install_requires=[
         "typer",  # TODO: remove typer?
         "pydantic[dotenv,email]",
-        "fastapi==0.75.2",
+        "readyapi==0.75.2",
         "requests",
         # Better logging
         "loguru",
@@ -70,8 +70,8 @@ setup(
             "kubernetes",
             "docker",
             # TODO: Dev only - timing
-            "fastapi-utils",
-            # Required by fastapi.security OAuth2PasswordBearer & fastapi.UploadFile for example
+            "readyapi-utils",
+            # Required by readyapi.security OAuth2PasswordBearer & readyapi.UploadFile for example
             "python-multipart",
             # Used for multipart stream parsing in file manager
             "streaming_form_data",

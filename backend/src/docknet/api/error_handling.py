@@ -1,8 +1,8 @@
 import traceback
 
-from fastapi import status
-from fastapi.encoders import jsonable_encoder
-from fastapi.exceptions import HTTPException, RequestValidationError
+from readyapi import status
+from readyapi.encoders import jsonable_encoder
+from readyapi.exceptions import HTTPException, RequestValidationError
 from loguru import logger
 from starlette.responses import JSONResponse, Response
 

@@ -12,8 +12,8 @@ RUN \
   apt-get update \
   && apt-get install -y libpq-dev
 
-# Install gunicorn and uvicorn to run FastAPI optimized
-RUN pip install --no-cache-dir "uvicorn[standard]" gunicorn fastapi faker
+# Install gunicorn and uvicorn to run ReadyAPI optimized
+RUN pip install --no-cache-dir "uvicorn[standard]" gunicorn readyapi faker
 
 RUN \
     mkdir /resources

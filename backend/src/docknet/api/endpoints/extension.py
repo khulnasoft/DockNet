@@ -1,6 +1,6 @@
 from typing import Any, List, Optional
 
-from fastapi import APIRouter, Depends, Path, Query, status
+from readyapi import APIRouter, Depends, Path, Query, status
 
 from docknet.api.dependencies import ComponentManager, get_component_manager
 from docknet.schema import CoreOperations, Extension, ExtensionInput

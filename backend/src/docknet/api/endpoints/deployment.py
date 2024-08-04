@@ -1,7 +1,7 @@
 from datetime import datetime
 from typing import Any, List, Optional
 
-from fastapi import APIRouter, Depends, Path, Query, Response, status
+from readyapi import APIRouter, Depends, Path, Query, Response, status
 
 from docknet.api.dependencies import ComponentManager, get_component_manager
 from docknet.managers.extension import parse_composite_id

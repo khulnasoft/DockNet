@@ -1,4 +1,4 @@
-"""Utilities for managing global and request state for an FastAPI app."""
+"""Utilities for managing global and request state for an ReadyAPI app."""
 
 from typing import Any, Callable, Optional
 

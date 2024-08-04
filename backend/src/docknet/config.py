@@ -42,7 +42,7 @@ class Settings(BaseSettings):
     DOCKNET_WEBAPP_PATH: str = "app"
 
     # TODO: handle HTTP/HTTPS
-    # bypass Docknet nginx and access FastAPI directly
+    # bypass Docknet nginx and access ReadyAPI directly
     DOCKNET_API_ENDPOINT: str = "http://docknet:8090/api"
 
     # The system namespace used to managed different versions

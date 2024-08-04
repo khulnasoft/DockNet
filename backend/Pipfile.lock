@@ -340,7 +340,7 @@
             "markers": "python_version >= '3.7'",
             "version": "==16.6.0"
         },
-        "fastapi": {
+        "readyapi": {
             "hashes": [
                 "sha256:a70d31f4249b6b42dbe267667d22f83af645b2d857876c97f83ca9573215784f",
                 "sha256:b5dac161ee19d33346040d3f44d8b7a9ac09b37df9efff95891f5e7641fa482f"
@@ -348,7 +348,7 @@
             "markers": "python_full_version >= '3.6.1'",
             "version": "==0.75.2"
         },
-        "fastapi-utils": {
+        "readyapi-utils": {
             "hashes": [
                 "sha256:0e6c7fc1870b80e681494957abf65d4f4f42f4c7f70005918e9181b22f1bd759",
                 "sha256:dd0be7dc7f03fa681b25487a206651d99f2330d5a567fb8ab6cb5f8a06a29360"
@@ -1613,7 +1613,7 @@
             "markers": "python_version >= '3.7'",
             "version": "==16.6.0"
         },
-        "fastapi": {
+        "readyapi": {
             "hashes": [
                 "sha256:a70d31f4249b6b42dbe267667d22f83af645b2d857876c97f83ca9573215784f",
                 "sha256:b5dac161ee19d33346040d3f44d8b7a9ac09b37df9efff95891f5e7641fa482f"
@@ -1621,7 +1621,7 @@
             "markers": "python_full_version >= '3.6.1'",
             "version": "==0.75.2"
         },
-        "fastapi-utils": {
+        "readyapi-utils": {
             "hashes": [
                 "sha256:0e6c7fc1870b80e681494957abf65d4f4f42f4c7f70005918e9181b22f1bd759",
                 "sha256:dd0be7dc7f03fa681b25487a206651d99f2330d5a567fb8ab6cb5f8a06a29360"

@@ -1,7 +1,7 @@
 from datetime import datetime
 from typing import Optional
 
-from fastapi import Path
+from readyapi import Path
 from pydantic import BaseModel, Field
 
 from docknet.schema.shared import Resource, ResourceInput

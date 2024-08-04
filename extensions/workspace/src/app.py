@@ -1,6 +1,6 @@
 from typing import Any
-from fastapi import Depends, FastAPI, status
-from fastapi.responses import HTMLResponse
+from readyapi import Depends, ReadyAPI, status
+from readyapi.responses import HTMLResponse
 
 from docknet.schema import ServiceInput
 from docknet.schema.project import PROJECT_ID_PARAM
@@ -25,7 +25,7 @@ SELF_DEPLOYMENT_NAME = os.getenv("DOCKNET_DEPLOYMENT_NAME", "")
 
 LABEL_EXTENSION_DEPLOYMENT_TYPE = "ctxy.workspaceExtension.deploymentType"
 
-api = FastAPI()
+api = ReadyAPI()
 
 
 @api.post(

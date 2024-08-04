@@ -5,7 +5,7 @@ from typing import Callable, Generator, List
 import pytest
 import requests
 from faker import Faker
-from fastapi.testclient import TestClient
+from readyapi.testclient import TestClient
 
 from docknet import config
 from docknet.clients import AuthClient

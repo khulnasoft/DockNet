@@ -1,11 +1,11 @@
-"""Collection of utilities for FastAPI apps."""
+"""Collection of utilities for ReadyAPI apps."""
 
 import asyncio
 import inspect
 from datetime import timedelta
 from typing import Any, Callable, Type
 
-from fastapi import FastAPI, Form
+from readyapi import ReadyAPI, Form
 from loguru import logger
 from pydantic import BaseModel
 from starlette.concurrency import run_in_threadpool
@@ -33,7 +33,7 @@ def schedule_call(func: Callable, interval: timedelta) -> None:
 def as_form(cls: Type[BaseModel]) -> Any:
     """Adds an as_form class method to decorated models.
 
-    The as_form class method can be used with FastAPI endpoints
+    The as_form class method can be used with ReadyAPI endpoints
     """
     new_params = [
         inspect.Parameter(
@@ -54,13 +54,13 @@ def as_form(cls: Type[BaseModel]) -> Any:
     return cls
 
 
-def patch_fastapi(app: FastAPI) -> None:
+def patch_readyapi(app: ReadyAPI) -> None:
     """Patch function to allow relative url resolution.
 
-    This patch is required to make fastapi fully functional with a relative url path.
-    This code snippet can be copy-pasted to any Fastapi application.
+    This patch is required to make readyapi fully functional with a relative url path.
+    This code snippet can be copy-pasted to any Readyapi application.
     """
-    from fastapi.openapi.docs import get_redoc_html, get_swagger_ui_html
+    from readyapi.openapi.docs import get_redoc_html, get_swagger_ui_html
     from starlette.requests import Request
     from starlette.responses import HTMLResponse
 
@@ -118,10 +118,10 @@ def patch_fastapi(app: FastAPI) -> None:
     app.add_route(app.redoc_url, redoc_ui_html, include_in_schema=False)
 
 
-def add_timing_info(app: FastAPI) -> None:
+def add_timing_info(app: ReadyAPI) -> None:
     import logging
 
-    from fastapi_utils.timing import add_timing_middleware
+    from readyapi_utils.timing import add_timing_middleware
 
     logging.basicConfig(level=logging.INFO)
     logger = logging.getLogger(__name__)
@@ -134,21 +134,21 @@ def add_timing_info(app: FastAPI) -> None:
     #    process_time = time.time() - start_time
     #    response.headers["X-Process-Time"] = str(process_time)
     #    return response
-    # fastapi-profiler
-    # from fastapi_profiler.profiler_middleware import PyInstrumentProfilerMiddleware
+    # readyapi-profiler
+    # from readyapi_profiler.profiler_middleware import PyInstrumentProfilerMiddleware
     # app.add_middleware(PyInstrumentProfilerMiddleware, profiler_output_type="html")
-    # import fastapi
+    # import readyapi
     # from asgi_server_timing import ServerTimingMiddleware
     # app.add_middleware(
     #    ServerTimingMiddleware,
     #    calls_to_track={
-    #        "1deps": (fastapi.routing.solve_dependencies,),
-    #        "2main": (fastapi.routing.run_endpoint_function,),
+    #        "1deps": (readyapi.routing.solve_dependencies,),
+    #        "2main": (readyapi.routing.run_endpoint_function,),
     # "3valid": (pydantic.fields.ModelField.validate,),
-    #        "4encode": (fastapi.encoders.jsonable_encoder,),
+    #        "4encode": (readyapi.encoders.jsonable_encoder,),
     #        "5render": (
-    #            fastapi.responses.JSONResponse.render,
-    #            fastapi.responses.ORJSONResponse.render,
+    #            readyapi.responses.JSONResponse.render,
+    #            readyapi.responses.ORJSONResponse.render,
     #        ),
     #    },
     # )

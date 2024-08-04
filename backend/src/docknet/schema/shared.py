@@ -2,7 +2,7 @@ from datetime import datetime
 from enum import Enum
 from typing import Any, Dict, List, Mapping, Optional, Union
 
-from fastapi import status
+from readyapi import status
 from pydantic import BaseModel, Field
 
 RESOURCE_ID_REGEX = r"^(?!.*--)[a-zA-Z0-9](?:[a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?$"
@@ -137,7 +137,7 @@ class ExtensibleOperations(str, Enum):
     OPEN_LOGIN_PAGE = "open_login_page"
 
 
-# TODO: https://fastapi.tiangolo.com/advanced/additional-responses/#combine-predefined-responses-and-custom-ones
+# TODO: https://readyapi.tiangolo.com/advanced/additional-responses/#combine-predefined-responses-and-custom-ones
 # DEFAULT_RESPONSES = {
 #    404: {"description": "Item not found"},
 #    307: {"description": "Redirecting to another URL"},

@@ -2,8 +2,8 @@ import os
 from datetime import datetime
 from typing import Any, Dict, List, Optional
 
-from fastapi import APIRouter, Depends, Path, Query, Request, Response, status
-from fastapi.responses import StreamingResponse
+from readyapi import APIRouter, Depends, Path, Query, Request, Response, status
+from readyapi.responses import StreamingResponse
 
 from docknet.api.dependencies import ComponentManager, get_component_manager
 from docknet.managers.extension import parse_composite_id

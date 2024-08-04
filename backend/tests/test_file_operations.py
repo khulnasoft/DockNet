@@ -8,7 +8,7 @@ from typing import Generator, Optional
 
 import pytest
 import requests
-from fastapi.testclient import TestClient
+from readyapi.testclient import TestClient
 
 from docknet import config
 from docknet.clients import AuthClient, JsonDocumentClient

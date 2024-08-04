@@ -1,7 +1,7 @@
 import os
 from typing import Any, List, Optional
 
-from fastapi import APIRouter, Body, Depends, Form, Query, Request, status
+from readyapi import APIRouter, Body, Depends, Form, Query, Request, status
 from requests_oauthlib import OAuth2Session
 from starlette.responses import RedirectResponse, Response
 

@@ -3,7 +3,7 @@ import time
 from datetime import datetime, timezone
 from typing import Dict, List, Literal, Optional, Union
 
-from fastapi.encoders import jsonable_encoder
+from readyapi.encoders import jsonable_encoder
 from starlette.responses import Response
 
 from docknet import config

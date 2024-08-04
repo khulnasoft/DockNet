@@ -1,7 +1,7 @@
 import json
 from typing import Any, Dict, List, Optional
 
-from fastapi import APIRouter, Depends, Path, Query, Response, status
+from readyapi import APIRouter, Depends, Path, Query, Response, status
 
 from docknet.api.dependencies import ComponentManager, get_component_manager
 from docknet.schema import CoreOperations, JsonDocument

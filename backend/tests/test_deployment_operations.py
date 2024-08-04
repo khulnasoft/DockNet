@@ -7,7 +7,7 @@ from typing import Generator, Tuple
 import docker.errors
 import pytest
 import requests
-from fastapi.testclient import TestClient
+from readyapi.testclient import TestClient
 from kubernetes import stream
 from kubernetes.client.models import V1Namespace
 from kubernetes.client.rest import ApiException
