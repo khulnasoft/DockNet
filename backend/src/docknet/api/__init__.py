@@ -1,6 +1,6 @@
 """API endpoints and related functionlity.
 
-lazydocs: ignore
+docsai: ignore
 """
 
 from .api import app

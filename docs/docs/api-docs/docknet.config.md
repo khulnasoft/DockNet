@@ -55,4 +55,4 @@ Get the redirect URI composed of the DOCKNET_HOST and DOCKNET_API_BASE_URL.
 
 ---
 
-_This file was automatically generated via [lazydocs](https://github.com/khulnasoft/lazydocs)._
+_This file was automatically generated via [docsai](https://github.com/khulnasoft/docsai)._

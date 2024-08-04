@@ -118,7 +118,7 @@ setup(
             "black",
             "pydocstyle",
             "isort",
-            "lazydocs",
+            "docsai",
             "locust",
             # Test profiling
             "pyinstrument",

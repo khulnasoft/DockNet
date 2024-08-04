@@ -162,4 +162,4 @@ This will update only the properties that are explicitly set in the `user_input`
 
 ---
 
-_This file was automatically generated via [lazydocs](https://github.com/khulnasoft/lazydocs)._
+_This file was automatically generated via [docsai](https://github.com/khulnasoft/docsai)._

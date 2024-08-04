@@ -1054,4 +1054,4 @@ Updates the last time the service was accessed and by which user.
 
 ---
 
-_This file was automatically generated via [lazydocs](https://github.com/khulnasoft/lazydocs)._
+_This file was automatically generated via [docsai](https://github.com/khulnasoft/docsai)._

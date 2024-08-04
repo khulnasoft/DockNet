@@ -70,7 +70,7 @@ def main(args: dict) -> None:
         build_utils.run("pipenv lock", exit_on_error=True)
 
     if args.get(build_utils.FLAG_RELEASE):
-        # Create API documentation via lazydocs
+        # Create API documentation via docsai
         build_python.generate_api_docs(
             github_url=GITHUB_URL, main_package=MAIN_PACKAGE, exit_on_error=True
         )

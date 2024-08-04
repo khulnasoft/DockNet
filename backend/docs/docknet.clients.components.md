@@ -183,4 +183,4 @@ get_system_manager() → SystemOperations
 
 ---
 
-_This file was automatically generated via [lazydocs](https://github.com/khulnasoft/lazydocs)._
+_This file was automatically generated via [docsai](https://github.com/khulnasoft/docsai)._
