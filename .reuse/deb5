@@ -1,0 +1,18 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: docknet
+Upstream-Contact: info@khulnasoft.com
+Source: https://github.com/khulnasoft/docknet
+
+Files: **
+Copyright: KhulnaSoft Bot, NxPkg, and gitworkflows
+License: MIT
+
+Files: ./docker/server/gunicorn_conf.py, ./docker/server/start.sh
+Copyright: 2024 KhulnaSoft Ltd <info@khulnasoft.com>
+License: MIT
+Comment: Taken from GitHub repository at https://github.com/khulnasoft/uvicorn-gunicorn-docker
+
+Files: ./docker/nginx/js/jwt.js
+Copyright: 2011 Kazuhito Hokamura
+License: MIT
+Comment:

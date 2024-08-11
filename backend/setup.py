@@ -11,8 +11,8 @@ NAME = "docknet"
 MAIN_PACKAGE = NAME  # Change if main package != NAME
 DESCRIPTION = "Python package template."
 URL = "https://github.com/khulnasoft/docknet"
-EMAIL = "team@khulnasoft.com"
-AUTHOR = "KhulnaSoft Team"
+EMAIL = "team@khulnasoft.org"
+AUTHOR = "ML Tooling Team"
 LICENSE = "MIT"
 REQUIRES_PYTHON = ">=3.8"
 VERSION = None  # Only set version if you like to overwrite the version in _about.py
@@ -53,7 +53,7 @@ setup(
     install_requires=[
         "typer",  # TODO: remove typer?
         "pydantic[dotenv,email]",
-        "readyapi>=0.75.2",
+        "readyapi==0.75.2",
         "requests",
         # Better logging
         "loguru",

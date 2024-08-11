@@ -55,7 +55,7 @@ If you deploy Docknet behind a proxy, you can define a base url. It must not end
 
 The application needs to be registered at the desired identity provider as a prerequisite. The IDP requires a redirect URI which is `https://{DOCKNET_HOST}/api/auth/oauth/callback`. For further details on how to registering the application at your IDP you should refer to it's documentation (e.g. [Google](https://developers.google.com/identity/protocols/oauth2/web-server)). Moreover, the following env variables need to be added to docknet:
 
-- DOCKNET_HOST - The domain where docknet gets deployed without scheme and path, e.g. if the app will be accessible under `https://home.docknet.khulnasoft.com/app` then you need to set `home.docknet.khulnasoft.com`.
+- DOCKNET_HOST - The domain where docknet gets deployed without scheme and path, e.g. if the app will be accessible under `https://home.docknet.com/app` then you need to set `home.docknet.com`.
 - OIDC_AUTH_ENABLED - Set to 1
 - OIDC_AUTH_URL - The OAuth2 authentication endpoint of the IDP
 - OIDC_TOKEN_URL - The OAuth2 endpint of the IDP to exchange an authorization code for an access token / identity token
