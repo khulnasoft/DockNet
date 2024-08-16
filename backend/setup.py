@@ -11,8 +11,8 @@ NAME = "docknet"
 MAIN_PACKAGE = NAME  # Change if main package != NAME
 DESCRIPTION = "Python package template."
 URL = "https://github.com/khulnasoft/docknet"
-EMAIL = "team@khulnasoft.org"
-AUTHOR = "ML Tooling Team"
+EMAIL = "info@khulnasoft.com"
+AUTHOR = "KhulnaSoft Ltd"
 LICENSE = "MIT"
 REQUIRES_PYTHON = ">=3.10"
 VERSION = None  # Only set version if you like to overwrite the version in _about.py
