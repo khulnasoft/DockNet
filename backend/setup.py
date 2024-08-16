@@ -14,7 +14,7 @@ URL = "https://github.com/khulnasoft/docknet"
 EMAIL = "team@khulnasoft.org"
 AUTHOR = "ML Tooling Team"
 LICENSE = "MIT"
-REQUIRES_PYTHON = ">=3.8"
+REQUIRES_PYTHON = ">=3.10"
 VERSION = None  # Only set version if you like to overwrite the version in _about.py
 
 PWD = os.path.abspath(os.path.dirname(__file__))
