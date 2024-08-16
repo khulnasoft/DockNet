@@ -1,7 +1,7 @@
 from enum import Enum
 from typing import Dict, List, Optional
 
-from readyapi import Query
+from fastapi import Query
 from pydantic import BaseModel, Field, validator
 
 

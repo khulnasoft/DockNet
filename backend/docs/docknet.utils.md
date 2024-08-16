@@ -7,7 +7,7 @@ Collection of utilities usable across all modules.
 
 **Global Variables**
 ---------------
-- **readyapi_utils**
+- **fastapi_utils**
 - **state_utils**
 - **auth_utils**
 - **id_utils**

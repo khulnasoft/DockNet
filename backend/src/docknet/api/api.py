@@ -3,9 +3,9 @@ import functools
 import sys
 from typing import Any, Dict
 
-from readyapi import ReadyAPI
-from readyapi.exceptions import RequestValidationError
-from readyapi.openapi.utils import get_openapi
+from fastapi import FastAPI
+from fastapi.exceptions import RequestValidationError
+from fastapi.openapi.utils import get_openapi
 from loguru import logger
 from starlette.exceptions import HTTPException as StarletteHTTPException
 from starlette.middleware.cors import CORSMiddleware
@@ -26,17 +26,17 @@ from docknet.api.endpoints import (
 )
 from docknet.managers.components import ComponentManager
 from docknet.managers.deployment.utils import stop_idle_services
-from docknet.utils import readyapi_utils, state_utils
+from docknet.utils import fastapi_utils, state_utils
 
 # Initialize API
-app = ReadyAPI(
+app = FastAPI(
     title="Docknet API",
     description="Functionality to create and manage projects, services, jobs, and files.",
     version=__version__,
 )
 
 if config.settings.DEBUG:
-    readyapi_utils.add_timing_info(app)
+    fastapi_utils.add_timing_info(app)
 
 # Setup logging
 logger.remove()
@@ -68,12 +68,12 @@ def on_startup() -> None:
     """Initializes the global app state object."""
     logger.info("Starting API server instance.")
     state_utils.GlobalState(app.state).settings = config.settings
-    state_utils.GlobalState(
-        app.state
-    ).shared_namespace.async_loop = asyncio.get_running_loop()
+    state_utils.GlobalState(app.state).shared_namespace.async_loop = (
+        asyncio.get_running_loop()
+    )
     component_manager = ComponentManager.from_app(app)
     # Schedule regular cleanup of idle services
-    readyapi_utils.schedule_call(
+    fastapi_utils.schedule_call(
         func=functools.partial(stop_idle_services, component_manager),
         interval=config.settings.SERVICE_IDLE_CHECK_INTERVAL,
     )
@@ -135,5 +135,5 @@ def custom_openapi() -> Dict[str, Any]:
 
 app.openapi = custom_openapi  # type: ignore
 
-# Patch Readyapi to allow relative path resolution.
-readyapi_utils.patch_readyapi(app)
+# Patch Fastapi to allow relative path resolution.
+fastapi_utils.patch_fastapi(app)

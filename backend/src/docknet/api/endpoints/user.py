@@ -1,7 +1,7 @@
 from typing import Any, List, Union
 
-from readyapi import APIRouter, Depends, Query, Response, status
-from readyapi.param_functions import Body
+from fastapi import APIRouter, Depends, Query, Response, status
+from fastapi.param_functions import Body
 
 from docknet.api.dependencies import ComponentManager, get_component_manager
 from docknet.schema import CoreOperations, User, UserInput, UserRegistration

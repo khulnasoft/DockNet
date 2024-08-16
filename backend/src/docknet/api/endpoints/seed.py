@@ -1,6 +1,6 @@
 from typing import Any
 
-from readyapi import APIRouter, Depends
+from fastapi import APIRouter, Depends
 
 from docknet.api.dependencies import ComponentManager, get_component_manager
 from docknet.schema import AccessLevel
