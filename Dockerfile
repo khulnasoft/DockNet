@@ -7,8 +7,8 @@ RUN \
     && echo "deb http://nginx.org/packages/mainline/ubuntu `lsb_release -cs` nginx" | tee /etc/apt/sources.list.d/nginx.list \
     && curl -fsSL https://nginx.org/keys/nginx_signing.key | apt-key add - \
     && apt-get update \
-    && apt-get install nginx \
-    && apt-get install -y nginx-module-njs
+    && apt-get install -y nginx nginx-module-njs \
+    && apt-get install -y cron libpopt0 logrotate
 
 # Install python3 and pip
 RUN \
