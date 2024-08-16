@@ -1,14 +1,14 @@
 <!-- markdownlint-disable -->
 
-<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/utils/readyapi_utils.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/utils/fastapi_utils.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
-# <kbd>module</kbd> `docknet.utils.readyapi_utils`
-Collection of utilities for ReadyAPI apps. 
+# <kbd>module</kbd> `docknet.utils.fastapi_utils`
+Collection of utilities for FastAPI apps. 
 
 
 ---
 
-<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/utils/readyapi_utils.py#L14"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/utils/fastapi_utils.py#L14"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `schedule_call`
 
@@ -28,7 +28,7 @@ Schedule a function to be called in regular intervals.
 
 ---
 
-<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/utils/readyapi_utils.py#L33"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/utils/fastapi_utils.py#L33"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `as_form`
 
@@ -38,32 +38,32 @@ as_form(cls: Type[BaseModel]) → Any
 
 Adds an as_form class method to decorated models. 
 
-The as_form class method can be used with ReadyAPI endpoints 
+The as_form class method can be used with FastAPI endpoints 
 
 
 ---
 
-<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/utils/readyapi_utils.py#L57"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/utils/fastapi_utils.py#L57"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
-## <kbd>function</kbd> `patch_readyapi`
+## <kbd>function</kbd> `patch_fastapi`
 
 ```python
-patch_readyapi(app: ReadyAPI) → None
+patch_fastapi(app: FastAPI) → None
 ```
 
 Patch function to allow relative url resolution. 
 
-This patch is required to make readyapi fully functional with a relative url path. This code snippet can be copy-pasted to any Readyapi application. 
+This patch is required to make fastapi fully functional with a relative url path. This code snippet can be copy-pasted to any Fastapi application. 
 
 
 ---
 
-<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/utils/readyapi_utils.py#L121"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/utils/fastapi_utils.py#L121"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `add_timing_info`
 
 ```python
-add_timing_info(app: ReadyAPI) → None
+add_timing_info(app: FastAPI) → None
 ```
 
 
