@@ -26,7 +26,7 @@ def main(args: dict) -> None:
     # Build python lib
     build_utils.build(PYTHON_LIB_COMPONENT, args)
 
-    # TODO: create ReadyAPI OpenAPI definition
+    # TODO: create FastAPI OpenAPI definition
     # TODO: copy OpenAPI definition to Web App
     if args.get(build_utils.FLAG_MAKE):
         # Duplicate api docs into the mkdocs documentation

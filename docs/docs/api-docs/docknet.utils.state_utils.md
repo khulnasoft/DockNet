@@ -3,7 +3,7 @@
 <a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/utils/state_utils.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 # <kbd>module</kbd> `docknet.utils.state_utils`
-Utilities for managing global and request state for an ReadyAPI app. 
+Utilities for managing global and request state for an FastAPI app. 
 
 
 

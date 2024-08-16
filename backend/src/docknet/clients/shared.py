@@ -1,5 +1,5 @@
 import requests
-from readyapi import HTTPException, status
+from fastapi import HTTPException, status
 from requests.models import Response
 
 from docknet.schema import UnauthenticatedError

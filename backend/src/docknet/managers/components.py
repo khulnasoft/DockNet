@@ -1,6 +1,6 @@
 from typing import Optional
 
-from readyapi import ReadyAPI, Request
+from fastapi import FastAPI, Request
 from loguru import logger
 from pydantic.networks import PostgresDsn
 from starlette.datastructures import State
@@ -51,7 +51,7 @@ class ComponentManager(ComponentOperations):
         )
 
     @classmethod
-    def from_app(cls, app: ReadyAPI) -> "ComponentManager":
+    def from_app(cls, app: FastAPI) -> "ComponentManager":
         return cls(
             GlobalState(app.state),
             RequestState(State()),

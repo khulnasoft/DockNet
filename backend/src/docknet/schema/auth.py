@@ -3,12 +3,12 @@ from enum import Enum
 from typing import Dict, List, Optional, Union
 
 import pydantic
-from readyapi import HTTPException, Path, status
+from fastapi import HTTPException, Path, status
 from pydantic import BaseModel, EmailStr, Field
 
 from docknet.schema.exceptions import ClientValueError
 from docknet.schema.shared import MAX_DESCRIPTION_LENGTH
-from docknet.utils.readyapi_utils import as_form
+from docknet.utils.fastapi_utils import as_form
 
 USERS_KIND = "users"
 ADMIN_ROLE = "roles/admin"

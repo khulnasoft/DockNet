@@ -1,7 +1,7 @@
 from typing import Dict, List, Optional, Tuple
 
-from readyapi import Security
-from readyapi.security import (
+from fastapi import Security
+from fastapi.security import (
     APIKeyCookie,
     APIKeyHeader,
     APIKeyQuery,

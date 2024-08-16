@@ -1,7 +1,7 @@
 from typing import Any, List
 
-from readyapi import APIRouter, Depends, Query, Response, status
-from readyapi.param_functions import Body
+from fastapi import APIRouter, Depends, Query, Response, status
+from fastapi.param_functions import Body
 
 from docknet import config
 from docknet.api.dependencies import ComponentManager, get_component_manager

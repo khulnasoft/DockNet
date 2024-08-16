@@ -1,8 +1,8 @@
 import os
 from typing import Any, List
 
-from readyapi import APIRouter, Body, Depends, Form, Response, status
-from readyapi.templating import Jinja2Templates
+from fastapi import APIRouter, Body, Depends, Form, Response, status
+from fastapi.templating import Jinja2Templates
 from loguru import logger
 from starlette.requests import Request
 from starlette.responses import HTMLResponse
@@ -111,7 +111,7 @@ def display_register_admin_form(
     if not route.startswith("/"):
         route = f"/{route}"
 
-    # TODO: use request.url_for in template when settings.DOCKNET_API_PATH is set as root path in readyapi app
+    # TODO: use request.url_for in template when settings.DOCKNET_API_PATH is set as root path in fastapi app
     return templates.TemplateResponse(
         "register-admin.html.j2",
         {
