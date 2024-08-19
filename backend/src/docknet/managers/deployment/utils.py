@@ -401,9 +401,9 @@ def get_default_environment_variables(
             description=f"Access token for service {deployment_id}.",
             token_purpose=TokenPurpose.SERVICE_ACCESS_TOKEN,
         )
-        default_environment_variables[_ENV_VARIABLE_DOCKNET_API_TOKEN] = (
-            service_api_token
-        )
+        default_environment_variables[
+            _ENV_VARIABLE_DOCKNET_API_TOKEN
+        ] = service_api_token
     except UnauthenticatedError:
         # If this function is called without an authenticated user, no token is provided to the service
         pass
@@ -413,9 +413,9 @@ def get_default_environment_variables(
         if len(endpoints) > 1:
             endpoint = "{endpoint}"
         # TODO: This url is only valid for services but not for jobs
-        default_environment_variables[_ENV_VARIABLE_DOCKNET_SERVICE_URL] = (
-            f"{settings.DOCKNET_BASE_URL}/projects/{project_id}/services/{deployment_id}/access/{endpoint}"
-        )
+        default_environment_variables[
+            _ENV_VARIABLE_DOCKNET_SERVICE_URL
+        ] = f"{settings.DOCKNET_BASE_URL}/projects/{project_id}/services/{deployment_id}/access/{endpoint}"
 
     if compute_resources:
         if compute_resources.max_gpus is not None and compute_resources.max_gpus > 0:
@@ -489,14 +489,14 @@ def get_template_mapping(
     template_mapping = {}
 
     if settings.DOCKNET_BASE_URL:
-        template_mapping[f"{{env.{_ENV_VARIABLE_DOCKNET_BASE_URL}}}"] = (
-            settings.DOCKNET_BASE_URL
-        )
+        template_mapping[
+            f"{{env.{_ENV_VARIABLE_DOCKNET_BASE_URL}}}"
+        ] = settings.DOCKNET_BASE_URL
 
     if settings.DOCKNET_API_ENDPOINT:
-        template_mapping[f"{{env.{_ENV_VARIABLE_DOCKNET_API_ENDPOINT}}}"] = (
-            settings.DOCKNET_API_ENDPOINT
-        )
+        template_mapping[
+            f"{{env.{_ENV_VARIABLE_DOCKNET_API_ENDPOINT}}}"
+        ] = settings.DOCKNET_API_ENDPOINT
 
     if project_id:
         template_mapping["{env.projectId}"] = project_id

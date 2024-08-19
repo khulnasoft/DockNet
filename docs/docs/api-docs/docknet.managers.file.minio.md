@@ -11,14 +11,14 @@
 
 ---
 
-<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/managers/file/minio.py#L28"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/managers/file/minio.py#L27"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>class</kbd> `MinioFileManager`
 
 
 
 
-<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/managers/file/minio.py#L43"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/managers/file/minio.py#L42"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `__init__`
 
@@ -39,7 +39,7 @@ Initializes the Minio File Manager.
 
 ---
 
-<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/managers/file/minio.py#L327"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/managers/file/minio.py#L326"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `delete_file`
 
@@ -67,16 +67,12 @@ If a specific file `version` is provided, only this one will be deleted. If no `
 
 ---
 
-<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/managers/file/minio.py#L378"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/managers/file/minio.py#L377"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `delete_files`
 
 ```python
-delete_files(
-    project_id: str,
-    date_from: Optional[datetime] = None,
-    date_to: Optional[datetime] = None
-) → None
+delete_files(project_id: str) → None
 ```
 
 Delete all files and storage resources related to a project. 
@@ -86,12 +82,10 @@ Delete all files and storage resources related to a project.
 **Args:**
  
  - <b>`project_id`</b> (str):  Project ID associated with the files. 
- - <b>`date_from`</b> (Optional[datetime], optional):  The start date to delete the files. If not specified, all files will be deleted. 
- - <b>`date_to`</b> (Optional[datetime], optional):  The end date to delete the files. If not specified, all files will be deleted. 
 
 ---
 
-<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/managers/file/minio.py#L282"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/managers/file/minio.py#L281"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `download_file`
 
@@ -129,7 +123,7 @@ Either the latest version will be returned or the specified one.
 
 ---
 
-<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/managers/file/minio.py#L417"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/managers/file/minio.py#L400"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `execute_file_action`
 
@@ -139,7 +133,7 @@ execute_file_action(
     file_key: str,
     action_id: str,
     version: Optional[str] = None
-) → Union[Response, NoneType]
+) → Response
 ```
 
 
@@ -148,7 +142,7 @@ execute_file_action(
 
 ---
 
-<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/managers/file/minio.py#L106"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/managers/file/minio.py#L105"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `get_file_metadata`
 
@@ -186,7 +180,7 @@ If no version is provided then the latest version will be returned.
 
 ---
 
-<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/managers/file/minio.py#L412"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/managers/file/minio.py#L395"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `list_file_actions`
 
@@ -204,7 +198,7 @@ list_file_actions(
 
 ---
 
-<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/managers/file/minio.py#L62"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/managers/file/minio.py#L61"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `list_files`
 
@@ -236,7 +230,7 @@ List files.
 
 ---
 
-<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/managers/file/minio.py#L145"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/managers/file/minio.py#L144"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `update_file_metadata`
 
@@ -276,7 +270,7 @@ If no version is provided then the latest version will be returned. Moreover, ad
 
 ---
 
-<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/managers/file/minio.py#L210"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/managers/file/minio.py#L209"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `upload_file`
 
