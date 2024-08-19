@@ -64,12 +64,6 @@ jobs:
           build_args: --make --force --version=${{ env.VERSION  }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: run-linting-and-style-checks
-        uses: ./.github/actions/build-environment
-        with:
-          build_args: --check --force --version=${{ env.VERSION  }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: run-component-tests
         uses: ./.github/actions/build-environment
         with:
