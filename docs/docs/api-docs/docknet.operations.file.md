@@ -11,7 +11,7 @@
 
 ---
 
-<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/operations/file.py#L8"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/operations/file.py#L7"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>class</kbd> `FileOperations`
 
@@ -23,7 +23,7 @@
 
 ---
 
-<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/operations/file.py#L130"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/operations/file.py#L129"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `delete_file`
 
@@ -51,31 +51,25 @@ If a specific file `version` is provided, only this one will be deleted. If no `
 
 ---
 
-<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/operations/file.py#L150"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/operations/file.py#L149"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `delete_files`
 
 ```python
-delete_files(
-    project_id: str,
-    date_from: Optional[datetime] = None,
-    date_to: Optional[datetime] = None
-) → None
+delete_files(project_id: str) → None
 ```
 
-Delete all files and storage resources related to a project. 
+Deletes all files associated with a project. 
 
 
 
 **Args:**
  
- - <b>`project_id`</b> (str):  Project ID associated with the files. 
- - <b>`date_from`</b> (Optional[datetime], optional):  The start date to delete the files. If not specified, all files will be deleted. 
- - <b>`date_to`</b> (Optional[datetime], optional):  The end date to delete the files. If not specified, all files will be deleted. 
+ - <b>`project_id`</b> (str):  Project ID associated with the file. 
 
 ---
 
-<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/operations/file.py#L106"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/operations/file.py#L105"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `download_file`
 
@@ -113,7 +107,7 @@ Either the latest version will be returned or the specified one.
 
 ---
 
-<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/operations/file.py#L172"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/operations/file.py#L167"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `execute_file_action`
 
@@ -132,7 +126,7 @@ execute_file_action(
 
 ---
 
-<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/operations/file.py#L30"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/operations/file.py#L29"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `get_file_metadata`
 
@@ -170,7 +164,7 @@ If no version is provided then the latest version will be returned.
 
 ---
 
-<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/operations/file.py#L166"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/operations/file.py#L161"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `list_file_actions`
 
@@ -188,7 +182,7 @@ list_file_actions(
 
 ---
 
-<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/operations/file.py#L9"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/operations/file.py#L8"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `list_files`
 
@@ -220,7 +214,7 @@ List files.
 
 ---
 
-<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/operations/file.py#L54"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/operations/file.py#L53"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `update_file_metadata`
 
@@ -260,7 +254,7 @@ If no version is provided then the latest version will be returned. Moreover, ad
 
 ---
 
-<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/operations/file.py#L80"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/khulnasoft/docknet/blob/main/backend/src/docknet/operations/file.py#L79"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ### <kbd>method</kbd> `upload_file`
 

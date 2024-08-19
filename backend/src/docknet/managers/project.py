@@ -259,11 +259,11 @@ class ProjectManager(ProjectOperations):
                 user_details.permission = (
                     AccessLevel.ADMIN
                     if resource_name in admin
-                    else (
-                        AccessLevel.WRITE
-                        if resource_name in write
-                        else AccessLevel.READ if resource_name in read else None
-                    )
+                    else AccessLevel.WRITE
+                    if resource_name in write
+                    else AccessLevel.READ
+                    if resource_name in read
+                    else None
                 )
                 project_users.append(user_details)
             except ResourceNotFoundError:
@@ -291,7 +291,7 @@ class ProjectManager(ProjectOperations):
             auth_utils.construct_permission(
                 f"{PROJECTS_KIND}/{project_id}",
                 access_level,
-            ),
+            )
             # TODO how to set the resource name and kind?
         )
         return self.list_project_members(project_id)

@@ -10,7 +10,7 @@
 <p>
     <a href="https://pypi.org/project/docknet/" title="PyPi Version"><img src="https://img.shields.io/pypi/v/docknet?color=green&style=flat"></a>
     <a href="https://pypi.org/project/docknet/" title="Python Version"><img src="https://img.shields.io/badge/Python-3.6%2B-blue&style=flat"></a>
-    <a href="https://github.com/khulnasoft/fastnode/blob/main/LICENSE" title="Project License"><img src="https://img.shields.io/badge/License-MIT-green.svg"></a>
+    <a href="https://github.com/khulnasoft/opyrator/blob/main/LICENSE" title="Project License"><img src="https://img.shields.io/badge/License-MIT-green.svg"></a>
     <a href="https://github.com/khulnasoft/docknet/actions?query=workflow%3Abuild-pipeline" title="Build status"><img src="https://img.shields.io/github/workflow/status/khulnasoft/docknet/build-pipeline?style=flat"></a>
     <a href="ttps://khulnasoft.substack.com/subscribe" title="Subscribe to newsletter"><img src="http://bit.ly/2Md9rxM"></a>
     <a href="https://twitter.com/khulnasoft" title="Follow on Twitter"><img src="https://img.shields.io/twitter/follow/khulnasoft.svg?style=social&label=Follow"></a>
@@ -21,9 +21,9 @@
   <a href="#features">Features</a> •
   <a href="#examples">Examples</a> •
   <a href="#support--feedback">Support</a> •
-  <a href="https://github.com/khulnasoft/fastnode/issues/new?labels=bug&template=01_bug-report.md">Report a Bug</a> •
+  <a href="https://github.com/khulnasoft/opyrator/issues/new?labels=bug&template=01_bug-report.md">Report a Bug</a> •
   <a href="#contribution">Contribution</a> •
-  <a href="https://github.com/khulnasoft/fastnode/releases">Changelog</a>
+  <a href="https://github.com/khulnasoft/opyrator/releases">Changelog</a>
 </p>
 
 Docknet is an extensible collaborative platform for teams to share files and deploy services and jobs easily using Docker or Kubernetes.The platform is secured so only members of a project can access its resources (files, services, jobs). Its strong extension system allows to add further functionality to the backend and web app and also to override the behavior of Docknet's core endpoints. By adding project members or generating fine-granular access tokens, resources can easily be shared with others. Deploying a service and securely sharing it with a stakeholder? No problem.

@@ -249,11 +249,9 @@ class MinioFileManager(FileOperations):
                 file_key,
                 file_stream,
                 -1,
-                (
-                    content_type
-                    if content_type is not None
-                    else "application/octet-stream"
-                ),
+                content_type
+                if content_type is not None
+                else "application/octet-stream",
                 part_size=10 * 1024 * 1024,
             )
         except S3Error as err:

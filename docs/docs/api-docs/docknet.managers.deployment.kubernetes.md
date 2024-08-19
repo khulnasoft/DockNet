@@ -27,7 +27,7 @@
 ### <kbd>method</kbd> `__init__`
 
 ```python
-__init__(kube_namespace: Optional[str] = None)
+__init__(kube_namespace: str = None)
 ```
 
 Initializes the Kubernetes Deployment Manager. 
