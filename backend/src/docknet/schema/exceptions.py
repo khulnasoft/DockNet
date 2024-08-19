@@ -1,6 +1,6 @@
 from typing import Any, Dict, Mapping, Optional, Union
 
-from readyapi import HTTPException, status
+from fastapi import HTTPException, status
 from pydantic import BaseModel, Field
 
 

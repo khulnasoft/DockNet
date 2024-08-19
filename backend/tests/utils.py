@@ -1,4 +1,5 @@
 """Shared Testing Utilities."""
+
 from typing import Optional, Union
 
 from docknet.managers.auth import AuthManager

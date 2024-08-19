@@ -1,7 +1,7 @@
 from enum import Enum
 from typing import Dict, List, Optional
 
-from readyapi import Query
+from fastapi import Query
 from pydantic import BaseModel, Field, validator
 
 
@@ -19,7 +19,7 @@ class SystemInfo(BaseModel):
     # TODO: orchestrator or other selected settings
     namespace: str = Field(
         ...,
-        example="mlhub",
+        example="mlrecipes",
         description="Namespace of this system.",
     )
     system_state: SystemState = Field(..., description="The state of the system.")

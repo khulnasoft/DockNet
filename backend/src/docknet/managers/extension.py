@@ -201,17 +201,17 @@ class ExtensionManager(ExtensionOperations):
         if not service_input.metadata:
             service_input.metadata = {}
         if extension.capabilities:
-            service_input.metadata[
-                METADATA_CAPABILITIES
-            ] = CAPABILITIES_METADATA_SEPARATOR.join(extension.capabilities)
+            service_input.metadata[METADATA_CAPABILITIES] = (
+                CAPABILITIES_METADATA_SEPARATOR.join(extension.capabilities)
+            )
         if extension.ui_extension_endpoint:
-            service_input.metadata[
-                METADATA_UI_EXTENSION_ENDPOINT
-            ] = extension.ui_extension_endpoint
+            service_input.metadata[METADATA_UI_EXTENSION_ENDPOINT] = (
+                extension.ui_extension_endpoint
+            )
         if extension.api_extension_endpoint:
-            service_input.metadata[
-                METADATA_API_EXTENSION_ENDPOINT
-            ] = extension.api_extension_endpoint
+            service_input.metadata[METADATA_API_EXTENSION_ENDPOINT] = (
+                extension.api_extension_endpoint
+            )
         if extension.extension_type:
             service_input.metadata[METADATA_EXTENSION_TYPE] = extension.extension_type
 

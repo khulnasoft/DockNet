@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import List, Optional
 
-from readyapi import Path
+from fastapi import Path
 from pydantic import BaseModel, ByteSize, Field
 
 from docknet.schema.shared import Resource, ResourceInput

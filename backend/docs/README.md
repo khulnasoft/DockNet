@@ -55,12 +55,12 @@
 - [`docknet.schema.shared`](./docknet.schema.shared.md#module-docknetschemashared)
 - [`docknet.utils`](./docknet.utils.md#module-docknetutils): Collection of utilities usable across all modules.
 - [`docknet.utils.auth_utils`](./docknet.utils.auth_utils.md#module-docknetutilsauth_utils)
-- [`docknet.utils.readyapi_utils`](./docknet.utils.readyapi_utils.md#module-docknetutilsreadyapi_utils): Collection of utilities for ReadyAPI apps.
+- [`docknet.utils.fastapi_utils`](./docknet.utils.fastapi_utils.md#module-docknetutilsfastapi_utils): Collection of utilities for FastAPI apps.
 - [`docknet.utils.file_utils`](./docknet.utils.file_utils.md#module-docknetutilsfile_utils)
 - [`docknet.utils.id_utils`](./docknet.utils.id_utils.md#module-docknetutilsid_utils): Utilities for generating IDs, tokens, and hashes.
 - [`docknet.utils.minio_utils`](./docknet.utils.minio_utils.md#module-docknetutilsminio_utils)
 - [`docknet.utils.postgres_utils`](./docknet.utils.postgres_utils.md#module-docknetutilspostgres_utils)
-- [`docknet.utils.state_utils`](./docknet.utils.state_utils.md#module-docknetutilsstate_utils): Utilities for managing global and request state for an ReadyAPI app.
+- [`docknet.utils.state_utils`](./docknet.utils.state_utils.md#module-docknetutilsstate_utils): Utilities for managing global and request state for an FastAPI app.
 - [`docknet.utils.utils`](./docknet.utils.utils.md#module-docknetutilsutils)
 
 ## Classes
@@ -231,10 +231,10 @@
 - [`auth_utils.is_valid_permission`](./docknet.utils.auth_utils.md#function-is_valid_permission): Returns `True` if the `permission_str` is valid permission.
 - [`auth_utils.parse_permission`](./docknet.utils.auth_utils.md#function-parse_permission): Extracts the resource name and access level from a permission.
 - [`auth_utils.parse_userid_from_resource_name`](./docknet.utils.auth_utils.md#function-parse_userid_from_resource_name): Returns the user id from a user-resource name.
-- [`readyapi_utils.add_timing_info`](./docknet.utils.readyapi_utils.md#function-add_timing_info)
-- [`readyapi_utils.as_form`](./docknet.utils.readyapi_utils.md#function-as_form): Adds an as_form class method to decorated models.
-- [`readyapi_utils.patch_readyapi`](./docknet.utils.readyapi_utils.md#function-patch_readyapi): Patch function to allow relative url resolution.
-- [`readyapi_utils.schedule_call`](./docknet.utils.readyapi_utils.md#function-schedule_call): Schedule a function to be called in regular intervals.
+- [`fastapi_utils.add_timing_info`](./docknet.utils.fastapi_utils.md#function-add_timing_info)
+- [`fastapi_utils.as_form`](./docknet.utils.fastapi_utils.md#function-as_form): Adds an as_form class method to decorated models.
+- [`fastapi_utils.patch_fastapi`](./docknet.utils.fastapi_utils.md#function-patch_fastapi): Patch function to allow relative url resolution.
+- [`fastapi_utils.schedule_call`](./docknet.utils.fastapi_utils.md#function-schedule_call): Schedule a function to be called in regular intervals.
 - [`file_utils.generate_file_id`](./docknet.utils.file_utils.md#function-generate_file_id)
 - [`id_utils.extract_ids_from_service_resource_name`](./docknet.utils.id_utils.md#function-extract_ids_from_service_resource_name): Extract the project id and service id from a service resource name.
 - [`id_utils.extract_project_id_from_resource_name`](./docknet.utils.id_utils.md#function-extract_project_id_from_resource_name): Extract the project id from a provided resource name.
