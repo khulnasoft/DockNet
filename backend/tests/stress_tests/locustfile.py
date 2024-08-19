@@ -1,4 +1,5 @@
 """Used for endpoint stress tests via locust."""
+
 import random
 from logging import error
 from typing import Dict, List, Tuple
