@@ -92,9 +92,7 @@ class Settings(BaseSettings):
         False  # Enable or disable the cache # TODO: currently not working -> deadlock
     )
     RESOURCE_PERMISSIONS_CACHE_SIZE: int = 10000  # number of items in the cache
-    RESOURCE_PERMISSIONS_CACHE_EXPIRY: int = (
-        10  # Time to live of cache items in seconds - This cache should have a very short lifetime
-    )
+    RESOURCE_PERMISSIONS_CACHE_EXPIRY: int = 10  # Time to live of cache items in seconds - This cache should have a very short lifetime
 
     # Usabel to deactivate setting or changing user passwords
     # The `system-admin` account can still set and change passwords for users,

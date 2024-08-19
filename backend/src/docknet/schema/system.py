@@ -19,7 +19,7 @@ class SystemInfo(BaseModel):
     # TODO: orchestrator or other selected settings
     namespace: str = Field(
         ...,
-        example="mlhub",
+        example="mlrecipes",
         description="Namespace of this system.",
     )
     system_state: SystemState = Field(..., description="The state of the system.")
