@@ -193,9 +193,11 @@ def build_kube_service_config(
                 Labels.DEPLOYMENT_TYPE.value: service.deployment_type,
             },
             # ports must be set and it must contain at least one port
-            ports=list(service_ports.values())
-            if len(service_ports.values()) > 0
-            else [V1ServicePort(name="default", protocol="TCP", port=80)],
+            ports=(
+                list(service_ports.values())
+                if len(service_ports.values()) > 0
+                else [V1ServicePort(name="default", protocol="TCP", port=80)]
+            ),
             type="ClusterIP",
         ),
     )
@@ -335,9 +337,9 @@ def build_kube_deployment_config(
         metadata=metadata,
         spec=V1DeploymentSpec(
             # TODO: the max_replicas name does not make so much sense. Probably just replicas?
-            replicas=compute_resources.max_replicas
-            if compute_resources.max_replicas
-            else 1,
+            replicas=(
+                compute_resources.max_replicas if compute_resources.max_replicas else 1
+            ),
             selector=V1LabelSelector(
                 match_labels={
                     Labels.DEPLOYMENT_ID.value: service.id,
@@ -551,9 +553,11 @@ def map_deployment(deployment: Union[V1Deployment, V1Job]) -> Dict[str, Any]:
         "deployment_type": mapped_labels.deployment_type,
         "description": mapped_labels.description,
         # TODO: replicase __ logic => use annotations instead of labels for all metadata that we don't use for filtering
-        "display_name": mapped_labels.display_name.replace("__", " ")
-        if mapped_labels.display_name
-        else "",
+        "display_name": (
+            mapped_labels.display_name.replace("__", " ")
+            if mapped_labels.display_name
+            else ""
+        ),
         "endpoints": mapped_labels.endpoints,
         # TODO: exit_code can only be queried on pod-level, but what if there are multiple replicas?
         # "exit_code": container.attrs.get("State", {}).get("ExitCode", -1),

@@ -284,9 +284,11 @@ class AzureBlobFileManager(FileOperations):
                 # Therefore the type mismatch can be ignored
                 file_stream,  # type: ignore
                 content_settings=ContentSettings(
-                    content_type=content_type
-                    if content_type is not None
-                    else "application/octet-stream",
+                    content_type=(
+                        content_type
+                        if content_type is not None
+                        else "application/octet-stream"
+                    ),
                 ),
                 overwrite=True,
             )

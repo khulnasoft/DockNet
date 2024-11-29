@@ -48,7 +48,7 @@ def _generate_user_data() -> List[UserRegistration]:
         UserRegistration(
             username=fake.user_name() + id_utils.generate_short_uuid(),
             email=fake.email(),
-        )
+        ),
         # TODO: Also some with missing emails/usernames?
     ]
     return generated_users

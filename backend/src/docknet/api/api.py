@@ -68,9 +68,9 @@ def on_startup() -> None:
     """Initializes the global app state object."""
     logger.info("Starting API server instance.")
     state_utils.GlobalState(app.state).settings = config.settings
-    state_utils.GlobalState(
-        app.state
-    ).shared_namespace.async_loop = asyncio.get_running_loop()
+    state_utils.GlobalState(app.state).shared_namespace.async_loop = (
+        asyncio.get_running_loop()
+    )
     component_manager = ComponentManager.from_app(app)
     # Schedule regular cleanup of idle services
     fastapi_utils.schedule_call(

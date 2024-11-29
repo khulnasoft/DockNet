@@ -15,7 +15,7 @@ EMAIL = "info@khulnasoft.com"
 AUTHOR = "KhulnaSoft DevOps Team"
 LICENSE = "MIT"
 REQUIRES_PYTHON = ">=3.8"
-VERSION = None  # Only set version if you like to overwrite the version in _about.py
+VERSION = "0.0.23"  # Only set version if you like to overwrite the version in _about.py
 
 PWD = os.path.abspath(os.path.dirname(__file__))
 
@@ -77,7 +77,8 @@ setup(
             "streaming_form_data",
             "psutil",
             "uvicorn",
-            "sqlalchemy>=1.4.0",
+            "colorama",
+            "sqlalchemy<=1.4.46",
             # Postgres Driver
             "psycopg2",
             # Generates concise, unambiguous, URL-safe UUIDs.

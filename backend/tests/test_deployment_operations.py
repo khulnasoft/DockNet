@@ -474,9 +474,9 @@ class DeploymentOperationsTests(ABC):
         )
         test_service_input.compute.min_lifetime = min_lifetime_via_compute_resources
         test_service_input.metadata[Labels.PROJECT_NAME.value] = user_set_project
-        test_service_input.metadata[
-            Labels.MIN_LIFETIME.value
-        ] = min_lifetime_via_metadata
+        test_service_input.metadata[Labels.MIN_LIFETIME.value] = (
+            min_lifetime_via_metadata
+        )
 
         service = self.deploy_service(
             project_id=self.project_id,
@@ -975,9 +975,9 @@ class TestKubernetesDeploymentManager(DeploymentOperationsTests):
             label_selector=f"ctxy.deploymentName={service_core.id},ctxy.projectName={project_core}",
         ).items[0]
         # modify the deployment type. Note that it cannot be done during deployment via the Docknet API due to security reasons.
-        pod_core.metadata.labels[
-            "ctxy.deploymentType"
-        ] = DeploymentType.CORE_BACKEND.value
+        pod_core.metadata.labels["ctxy.deploymentType"] = (
+            DeploymentType.CORE_BACKEND.value
+        )
         self._kubernetes_deployment_platform.core_api.patch_namespaced_pod(
             name=pod_core.metadata.name, namespace=namespace, body=pod_core
         )
